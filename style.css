@@ -1,25 +1,20 @@
-/* Make sure particles background fills the page */
-#particles-js {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: #fde4be; /* fallback color */
-    z-index: -1;
-    top: 0;
-    left: 0;
-  }
-  
-  /* Your main content should sit above the particles */
-  main, header, section {
-    position: relative;
-    z-index: 1;
-  }
-  
-  /* Optional: smooth font and layout styling */
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    overflow-x: hidden;
-    background-color: transparent;
-  }
-  
+/* Buttons – smooth, modern, clickable */
+a.button {
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: transform 0.25s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+a.button:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+a.button:active {
+  transform: scale(0.97);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}

@@ -10,9 +10,9 @@
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #fce6c8;
-      overflow-x: hidden;
-      position: relative;
+      background-color: #fffdf8;
+      color: #1a1a1a;
+      scroll-behavior: smooth;
     }
     .blob {
       position: absolute;
@@ -21,66 +21,91 @@
       z-index: -1;
       mix-blend-mode: multiply;
     }
-    .blob1 { width: 20rem; height: 20rem; background: #f7d9aa; top: 10%; left: -10%; animation: move1 18s ease-in-out infinite alternate; }
-    .blob2 { width: 24rem; height: 24rem; background: #ecd2b4; bottom: -10%; right: -5%; animation: move2 25s ease-in-out infinite alternate; }
-    .blob3 { width: 18rem; height: 18rem; background: #f3b985; top: 65%; left: 25%; animation: move3 22s ease-in-out infinite alternate; }
-    .blob4 { width: 16rem; height: 16rem; background: #f4d8b2; top: 30%; right: 10%; animation: move4 20s ease-in-out infinite alternate; }
-    @keyframes move1 { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(60px, -30px) scale(1.05); } }
-    @keyframes move2 { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(-40px, 50px) scale(1.1); } }
-    @keyframes move3 { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(40px, -20px) scale(1.05); } }
-    @keyframes move4 { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(-30px, 20px) scale(1.1); } }
-    .floating { animation: floatImage 6s ease-in-out infinite; }
-    @keyframes floatImage { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-    .hover-letters span { display: inline-block; transition: transform 0.3s ease, color 0.3s ease; margin-right: 0.5px; }
-    .hover-letters span:hover { transform: translateY(-5px) scale(1.05); color: #8c7eff; }
+    .blob1 { width: 20rem; height: 20rem; background: #e5e5ff; top: 5%; left: -10%; animation: move1 12s ease-in-out infinite alternate; }
+    .blob2 { width: 24rem; height: 24rem; background: #ffc0cb; bottom: -10%; right: -5%; animation: move2 18s ease-in-out infinite alternate; }
+
+    @keyframes move1 {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(80px, -40px) scale(1.05); }
+    }
+    @keyframes move2 {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(-60px, 30px) scale(1.1); }
+    }
+
+    .hover-letters span {
+      display: inline-block;
+      transition: transform 0.3s ease, color 0.3s ease;
+      margin-right: 0.5px;
+    }
+
+    .hover-letters span:hover {
+      transform: translateY(-5px) scale(1.03);
+      color: #8c7eff;
+    }
+
+    a.button {
+      padding: 0.6rem 1.2rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    a.button:hover {
+      transform: scale(1.05);
+    }
+
+    img.profile {
+      border-radius: 1rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      transition: transform 0.4s ease;
+    }
+
+    img.profile:hover {
+      transform: scale(1.02);
+    }
   </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="text-gray-900">
+<body class="relative">
   <div class="blob blob1"></div>
   <div class="blob blob2"></div>
-  <div class="blob blob3"></div>
-  <div class="blob blob4"></div>
 
-  <header class="flex justify-between items-center px-6 py-4 bg-[#fff5e9]/90 shadow-sm sticky top-0 z-50 backdrop-blur">
-    <h1 class="text-3xl font-extrabold tracking-tight">Arianne Villavicencio</h1>
-    <nav class="space-x-6 text-base">
-      <a href="#about" class="hover:underline">About</a>
-      <a href="#projects" class="hover:underline">Projects</a>
-      <a href="#contact" class="hover:underline">Contact</a>
+  <header class="flex justify-between items-center px-6 py-4 bg-white/70 shadow-sm sticky top-0 z-50 backdrop-blur">
+    <h1 class="text-xl md:text-2xl font-bold">Arianne Villavicencio</h1>
+    <nav class="space-x-6 text-sm md:text-base font-medium">
+    
     </nav>
   </header>
 
   <main class="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-16 py-20 gap-12 max-w-6xl mx-auto">
     <div class="max-w-xl z-10">
-      <h2 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6 text-gray-900 tracking-tight hover-letters">
+      <h2 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6 tracking-tight hover-letters">
         <span>I lead with purpose</span><br />
         <span>and build bridges that last.</span>
       </h2>
-      <p class="text-lg text-gray-700 mb-8 hover-letters">
-        <span>As a student researcher in 3D bioprinting and grassroots technologist, I merge science, empathy, and strategy to connect communities with tools that matter—bridging regenerative medicine, public policy, and design innovation across Latin America and the UAE.</span>
+      <p class="text-lg text-gray-700 mb-8">
+        As a student researcher in 3D bioprinting and grassroots technologist, I merge science, empathy, and strategy to connect communities with tools that matter—bridging regenerative medicine, public policy, and design innovation across Latin America and the UAE.
       </p>
       <div class="flex gap-4 flex-wrap">
-        <a href="#projects" class="px-6 py-2 border border-black text-black rounded-md hover:bg-gray-100 hover:scale-105 transition-all duration-300">
-          Explore my work
-        </a>
-        <a href="#contact" class="px-6 py-2 bg-[#8c7eff] text-white rounded-md hover:bg-[#7a6ce0] hover:scale-105 transition-all duration-300">
-          Let’s connect
-        </a>
+        <a href="#projects" class="button border border-black text-black hover:bg-gray-100">Explore my work</a>
+        <a href="#contact" class="button bg-[#8c7eff] text-white hover:bg-[#7a6ce0]">Let’s connect</a>
       </div>
-      <div class="flex gap-6 mt-4 text-2xl">
-        <a href="https://linkedin.com/in/arianne-vt" target="_blank" class="hover:text-blue-600 hover:scale-110 transition-transform duration-300">
+      <div class="flex gap-6 mt-6 text-2xl">
+        <a href="https://linkedin.com/in/arianne-vt" target="_blank" class="hover:text-blue-600">
           <i class="fab fa-linkedin"></i>
         </a>
-        <a href="https://github.com/YOUR_USERNAME" target="_blank" class="hover:text-gray-800 hover:scale-110 transition-transform duration-300">
+        <a href="https://github.com/YOUR_USERNAME" target="_blank" class="hover:text-gray-800">
           <i class="fab fa-github"></i>
         </a>
-        <a href="/Arianne_CV.pdf" download class="hover:text-purple-600 hover:scale-110 transition-transform duration-300">
+        <a href="/Arianne_CV.pdf" download class="hover:text-purple-600">
           <i class="fas fa-file-download"></i>
         </a>
       </div>
     </div>
-    <div class="w-80 floating z-10">
-      <img src="Ari.png" alt="Arianne illustration" class="w-full rounded-xl shadow-md" />
+    <div class="w-64 md:w-80 z-10">
+      <!-- Replace the src below with your real image -->
+      <img src="ARI.png" alt="" class="w-full profile" />
     </div>
   </main>
 </body>
