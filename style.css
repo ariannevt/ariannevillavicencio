@@ -1,0 +1,25 @@
+/* Make sure particles background fills the page */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #fde4be; /* fallback color */
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+  
+  /* Your main content should sit above the particles */
+  main, header, section {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Optional: smooth font and layout styling */
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+    background-color: transparent;
+  }
+  
