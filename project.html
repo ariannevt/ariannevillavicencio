@@ -5,59 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects – Arianne Villavicencio</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #fce6c8;
-      overflow-x: hidden;
-      position: relative;
+      font-family: 'DM Serif Display', serif;
+      background-color: #fffdf8;
+      color: #1a1a1a;
     }
-    .blob {
-      position: absolute;
-      border-radius: 50%;
-      opacity: 0.2;
-      z-index: -1;
-      mix-blend-mode: multiply;
+    .project-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .blob1 { width: 20rem; height: 20rem; background: #f7d9aa; top: 10%; left: -10%; animation: move1 18s ease-in-out infinite alternate; }
-    .blob2 { width: 24rem; height: 24rem; background: #ecd2b4; bottom: -10%; right: -5%; animation: move2 25s ease-in-out infinite alternate; }
-    @keyframes move1 { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(60px, -30px) scale(1.05); } }
-    @keyframes move2 { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(-40px, 50px) scale(1.1); } }
+    .project-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
   </style>
 </head>
-<body class="text-gray-900">
-  <div class="blob blob1"></div>
-  <div class="blob blob2"></div>
-
-  <header class="flex justify-between items-center px-6 py-4 bg-[#fff5e9]/90 shadow-sm sticky top-0 z-50 backdrop-blur">
-    <h1 class="text-3xl font-extrabold tracking-tight">Arianne Villavicencio</h1>
-    <nav class="space-x-6 text-base">
-      <a href="index.html" class="hover:underline">Home</a>
-      <a href="about.html" class="hover:underline">About</a>
-      <a href="contact.html" class="hover:underline">Contact</a>
-    </nav>
+<body class="px-6 md:px-16 py-16 max-w-5xl mx-auto">
+  <header class="flex justify-between items-center mb-12">
+    <h1 class="text-2xl font-bold">Arianne Villavicencio</h1>
+    <a href="index.html" class="text-[#8c7eff] underline">← Back to Home</a>
   </header>
 
-  <main class="px-6 md:px-16 py-20 max-w-5xl mx-auto">
-    <h2 class="text-4xl font-bold mb-6 hover-letters">
-      <span>Projects</span>
-    </h2>
-    <div class="space-y-8">
-      <div>
-        <h3 class="text-2xl font-semibold mb-2">Bioprinting for Regenerative Medicine</h3>
-        <p class="text-gray-700">Developing 3D tissue models for skin regeneration using natural bioinks. Bridging research and accessible biomedical solutions in Latin America.</p>
-      </div>
-      <div>
-        <h3 class="text-2xl font-semibold mb-2">Koliwada Pond Restoration – Mumbai</h3>
-        <p class="text-gray-700">Community-led engineering and ethnographic work to restore brackish fishing ponds using sustainable sediment removal and water purification techniques.</p>
-      </div>
-      <div>
-        <h3 class="text-2xl font-semibold mb-2">Inclusive Science Communication</h3>
-        <p class="text-gray-700">Worked on podcasting and digital storytelling projects to demystify science and technology in bilingual formats for underrepresented communities.</p>
+  <section>
+    <h2 class="text-5xl font-extrabold mb-10">My Work</h2>
+    <div class="grid md:grid-cols-2 gap-10">
+      <a href="https://ariannevt.github.io/joy/index.html" target="_blank" class="project-card border border-gray-200 p-6 rounded-xl">
+        <h3 class="text-2xl font-semibold mb-2">JOY</h3>
+        <p class="text-lg">An emotional well-being game about memory, reflection, and lightness.</p>
+      </a>
+      <a href="https://ariannevt.github.io/Cactulus-Crisis/" target="_blank" class="project-card border border-gray-200 p-6 rounded-xl">
+        <h3 class="text-2xl font-semibold mb-2">Cactulus Crisis</h3>
+        <p class="text-lg">A climate-themed game about cactus conservation and desert ecology.</p>
+      </a>
+      <a href="https://siyonaaa.github.io/Comms-Lab-Assignment-3/index.html" target="_blank" class="project-card border border-gray-200 p-6 rounded-xl">
+        <h3 class="text-2xl font-semibold mb-2">Comms Lab: Chemistry Match</h3>
+        <p class="text-lg">Interactive game that teaches periodic table elements in a fun and engaging way.</p>
+      </a>
+      <a href="https://allenkaykay12.github.io/comlabVideoProject/#video" target="_blank" class="project-card border border-gray-200 p-6 rounded-xl">
+        <h3 class="text-2xl font-semibold mb-2">Video Project: Public Health</h3>
+        <p class="text-lg">A digital storytelling piece reflecting on systemic health disparities.</p>
+      </a>
+      <div class="project-card border border-gray-200 p-6 rounded-xl">
+        <h3 class="text-2xl font-semibold mb-2">More Coming Soon...</h3>
+        <p class="text-lg">Stay tuned for additional interactive and design research projects!</p>
       </div>
     </div>
-  </main>
+  </section>
 </body>
 </html>
