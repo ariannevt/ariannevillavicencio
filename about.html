@@ -7,6 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       font-family: 'DM Serif Display', serif;
@@ -24,33 +25,56 @@
     }
   </style>
 </head>
-<body class="px-6 md:px-16 py-16 max-w-5xl mx-auto">
-  <header class="flex justify-between items-center mb-12">
-    <h1 class="text-2xl font-bold hover-letters">
-      <span>A</span><span>r</span><span>i</span><span>a</span><span>n</span><span>n</span><span>e</span>
-      <span> </span>
-      <span>V</span><span>i</span><span>l</span><span>l</span><span>a</span><span>v</span><span>i</span><span>c</span><span>e</span><span>n</span><span>c</span><span>i</span><span>o</span>
-    </h1>
+<body class="relative overflow-hidden bg-[#fffdf8] text-gray-900 px-6 md:px-16 py-16 max-w-7xl mx-auto">
+  <div id="particles-js"></div>
+
+  <header class="flex justify-between items-center px-6 py-4 sticky top-0 z-50 backdrop-blur bg-white/70 shadow-sm">
+    <h1 class="text-xl md:text-2xl font-bold">Arianne Villavicencio</h1>
     <a href="index.html" class="text-[#8c7eff] underline">← Back to Home</a>
   </header>
 
-  <section class="mb-12">
-    <h2 class="text-5xl font-extrabold mb-6 hover-letters">
-      <span>A</span><span>b</span><span>o</span><span>u</span><span>t</span><span> </span><span>M</span><span>e</span>
-    </h2>
-    <p class="text-2xl leading-relaxed font-semibold">
-      I'm a student researcher and technologist passionate about solving social challenges through thoughtful design, policy, and engineering. My academic background in Social Research and Public Policy with a minor in Engineering has shaped how I view technology — not as a product, but as a tool for dignity, access, and care.
-    </p>
-    <p class="text-2xl leading-relaxed mt-4 font-semibold">
-      Whether building a public health dashboard, co-creating in community labs, or making games that teach chemistry — I believe in work that bridges science and social impact.
-    </p>
-  </section>
+  <main class="relative z-10">
+    <section class="mb-12">
+      <p class="text-2xl leading-relaxed font-semibold">
+        I'm a student researcher and technologist passionate about solving social challenges through thoughtful design, policy, and engineering. My academic background in Social Research and Public Policy with a minor in Engineering has shaped how I view technology — not as a product, but as a tool for dignity, access, and care.
+      </p>
+      <p class="text-2xl leading-relaxed mt-4 font-semibold">
+        Whether building a public health dashboard, co-creating in community labs, or making games that teach chemistry — I believe in work that bridges science and social impact.
+      </p>
+    </section>
 
-  <section>
-    <h3 class="text-3xl font-semibold mb-4">📬 Contact</h3>
-    <p class="text-2xl">Email: <a href="mailto:arianne@email.com" class="text-[#8c7eff] underline">arianne@email.com</a></p>
-    <p class="text-2xl mt-2">LinkedIn: <a href="https://linkedin.com/in/arianne-vt" target="_blank" class="text-[#8c7eff] underline">/arianne-vt</a></p>
-    <p class="text-2xl mt-2">CV: <a href="CV.%20Arianne%20Villavicencio..pdf" download class="text-[#8c7eff] underline">Download here</a></p>
-  </section>
+    <section>
+      <h3 class="text-3xl font-semibold mb-4">📬 Contact</h3>
+      <p class="text-2xl">Email: <a href="mailto:ariannevillavicencio04@gmail.com" class="text-[#8c7eff] underline">ariannevillavicencio04@gmail.com</a></p>
+      <p class="text-2xl mt-2">LinkedIn: <a href="https://linkedin.com/in/arianne-vt" target="_blank" class="text-[#8c7eff] underline">/arianne-vt</a></p>
+      <p class="text-2xl mt-2">CV: <a href="CV.%20Arianne%20Villavicencio..pdf" download class="text-[#8c7eff] underline">Download here</a></p>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 120 },
+        size: { value: 8 },
+        color: { value: "#a18fff" },
+        opacity: { value: 0.4 },
+        move: { enable: true, speed: 2 },
+        line_linked: { enable: false },
+        shape: { type: "star" }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" }
+        },
+        modes: {
+          repulse: { distance: 100, duration: 0.4 },
+          push: { particles_nb: 4 }
+        }
+      }
+    });
+  </script>
 </body>
 </html>
