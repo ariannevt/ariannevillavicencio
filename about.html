@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About – Arianne Villavicencio</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -18,13 +17,6 @@
       background-color: #fffdf8;
       color: #1a1a1a;
       scroll-behavior: smooth;
-    }
-    #particles-js {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: transparent;
-      z-index: -10;
     }
     .highlight-text span {
       display: inline-block;
@@ -44,59 +36,18 @@
     }
   </style>
 </head>
-<body class="relative overflow-hidden bg-[#fffdf8] text-gray-900">
-  <div id="particles-js"></div>
+<body class="bg-[#fffdf8] text-gray-900 overflow-x-hidden">
 
   <header class="flex justify-between items-center px-6 py-4 sticky top-0 z-50 backdrop-blur bg-white/70 shadow-sm">
     <h1 class="text-xl md:text-2xl font-bold">Arianne Villavicencio</h1>
     <a href="index.html" class="text-[#8c7eff] underline">← Back to Home</a>
   </header>
-
   <main class="px-6 md:px-16 py-24 max-w-7xl mx-auto relative z-10">
     <h2 class="text-5xl md:text-6xl font-extrabold mb-10 leading-tight">About Me</h2>
-    <p class="text-2xl md:text-3xl leading-relaxed font-semibold max-w-4xl">
-      I’m a student at <strong>New York University Abu Dhabi</strong>, passionate about using technology, policy, and design to solve social challenges. My work bridges public health, sustainability, and grassroots innovation—building tools that serve dignity and possibility.
+    <p class="text-2xl md:text-3xl leading-relaxed max-w-4xl text-gray-800">
+      I’m a student at New York University Abu Dhabi, passionate about using technology, policy, and design to solve social challenges. My work bridges public health, sustainability, and grassroots innovation—building tools that serve dignity and possibility.
     </p>
-
-    <div class="illustration">
-      <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_puciaact.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
-      <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_w51pcehl.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
-      <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_mcelnmbn.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
-    </div>
   </main>
-
-  <script>
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.from("h2", {
-      duration: 1.2,
-      opacity: 0,
-      y: 30,
-      ease: "power3.out"
-    });
-
-    particlesJS("particles-js", {
-      particles: {
-        number: { value: 120 },
-        size: { value: 8 },
-        color: { value: "#a18fff" },
-        opacity: { value: 0.4 },
-        move: { enable: true, speed: 2 },
-        line_linked: { enable: false },
-        shape: { type: "star" }
-      },
-      interactivity: {
-        detect_on: "canvas",
-        events: {
-          onhover: { enable: true, mode: "repulse" },
-          onclick: { enable: true, mode: "push" }
-        },
-        modes: {
-          repulse: { distance: 100, duration: 0.4 },
-          push: { particles_nb: 4 }
-        }
-      }
-    });
-  </script>
+  
 </body>
 </html>
