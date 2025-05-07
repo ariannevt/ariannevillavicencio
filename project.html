@@ -3,53 +3,118 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <header class="flex justify-between items-center px-6 py-4 sticky top-0 z-50 backdrop-blur bg-white/70 shadow-sm">
-    <h1 class="text-xl md:text-2xl font-bold">Arianne Villavicencio</h1>
-    <a href="index.html" class="text-[#8c7eff] underline">← Back to Home</a>
-  </header>
+  <title>Projects – Arianne Villavicencio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     body {
+      font-family: 'Inter', sans-serif;
+      background-color: #FDFFF0;
+      color: #1A1A1A;
+      scrollbar-color: #BC7EFF #FDFFF0;
+      scrollbar-width: thin;
+    }
+    h1, h2, h3 {
       font-family: 'DM Serif Display', serif;
-      background-color: #fffdf8;
-      color: #1a1a1a;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FDFFF0;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #BC7EFF;
+      border-radius: 6px;
     }
     .project-card {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .project-card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      transform: scale(1.02);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    .iframe-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      margin-top: 1rem;
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+    .iframe-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 1px solid #ccc;
     }
   </style>
 </head>
+
 <body class="px-6 md:px-16 py-16 max-w-5xl mx-auto">
+
+  <!-- Unified Header -->
+  <header class="flex justify-between items-center px-6 py-4 sticky top-0 z-50 backdrop-blur bg-[#FDFFF0]/90 shadow-sm border-b border-[#f3f3ea]">
+    <h1 class="text-xl md:text-2xl font-bold">Arianne Villavicencio</h1>
+    <a href="index.html" class="text-[#BC7EFF] underline hover:text-[#5D5FEE]">← Back to Home</a>
+  </header>
+
   <section>
-    <h2 class="text-5xl font-extrabold mb-10">My Work</h2>
-    <div class="grid md:grid-cols-2 gap-10">
-      <a href="https://ariannevt.github.io/joy/index.html" target="_blank" class="project-card border border-gray-200 p-6 rounded-xl">
-        <h3 class="text-2xl font-semibold mb-2">JOY</h3>
-        <p class="text-lg">An emotional well-being game about memory, reflection, and lightness.</p>
-      </a>
-      <a href="https://ariannevt.github.io/Cactulus-Crisis/" target="_blank" class="project-card border border-gray-200 p-6 rounded-xl">
-        <h3 class="text-2xl font-semibold mb-2">Cactulus Crisis</h3>
-        <p class="text-lg">A climate-themed game about cactus conservation and desert ecology.</p>
-      </a>
-      <a href="https://siyonaaa.github.io/Comms-Lab-Assignment-3/index.html" target="_blank" class="project-card border border-gray-200 p-6 rounded-xl">
-        <h3 class="text-2xl font-semibold mb-2">Comms Lab: Chemistry Match</h3>
-        <p class="text-lg">Interactive game that teaches periodic table elements in a fun and engaging way.</p>
-      </a>
-      <a href="https://allenkaykay12.github.io/comlabVideoProject/#video" target="_blank" class="project-card border border-gray-200 p-6 rounded-xl">
-        <h3 class="text-2xl font-semibold mb-2">Video Project: Public Health</h3>
-        <p class="text-lg">A digital storytelling piece reflecting on systemic health disparities.</p>
-      </a>
+    <h2 class="text-5xl font-extrabold mb-10 mt-10">My Work</h2>
+    <div class="grid md:grid-cols-1 gap-16">
+
+      <!-- JOY -->
       <div class="project-card border border-gray-200 p-6 rounded-xl">
-        <h3 class="text-2xl font-semibold mb-2">More Coming Soon...</h3>
-        <p class="text-lg">Stay tuned for additional interactive and design research projects!</p>
+        <h3 class="text-2xl font-semibold mb-2">JOY</h3>
+        <p class="text-lg">An interactive website exploring emotions through storytelling, built for the 30MFF showcase.</p>
+        <div class="iframe-wrapper">
+          <iframe src="https://ariannevt.github.io/joy/index.html" allowfullscreen></iframe>
+        </div>
       </div>
+
+      <!-- Cactulus Crisis -->
+      <div class="project-card border border-gray-200 p-6 rounded-xl">
+        <h3 class="text-2xl font-semibold mb-2">Cactulus Crisis</h3>
+        <p class="text-lg">A visual comic project addressing environmental resilience and emotional growth through narrative panels.</p>
+        <div class="iframe-wrapper">
+          <iframe src="https://ariannevt.github.io/Cactulus-Crisis/" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- Chemistry Game -->
+      <div class="project-card border border-gray-200 p-6 rounded-xl">
+        <h3 class="text-2xl font-semibold mb-2">Comms Lab: Chemistry Match</h3>
+        <p class="text-lg">An interactive chemistry memory game that teaches periodic table elements in a playful and educational way.</p>
+        <div class="iframe-wrapper">
+          <iframe src="https://siyonaaa.github.io/Comms-Lab-Assignment-3/index.html" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- Public Health Video -->
+      <div class="project-card border border-gray-200 p-6 rounded-xl">
+        <h3 class="text-2xl font-semibold mb-2">Video Project: Public Health</h3>
+        <p class="text-lg">A digital storytelling short video reflecting on systemic health disparities and resilience in marginalized communities.</p>
+        <div class="iframe-wrapper">
+          <iframe src="https://allenkaykay12.github.io/comlabVideoProject/#video" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- Work Experience Section -->
+      <div class="project-card border border-gray-200 p-6 rounded-xl bg-[#F8F6FF]">
+        <h3 class="text-2xl font-semibold mb-2">Beyond Classrooms: Experience & Internships</h3>
+        <p class="text-lg">This portfolio reflects not only academic work but also real-world experiences. As a Social Media Content Creator at NYUAD's Global Education Office, I produced digital content to engage international audiences. I’ve worked on design research projects rooted in public health and storytelling, collaborated with community organizations on participatory projects, and developed educational tools that blend technology and empathy. These roles shaped how I approach every project—with narrative thinking, strategic clarity, and a commitment to impact.</p>
+        <div class="mt-4">
+          <a href="https://github.com/ariannevt" target="_blank" class="text-[#5D5FEE] underline hover:text-[#333366]">
+            → View related work and code on GitHub
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
+
 </body>
 </html>
