@@ -122,10 +122,14 @@
     </div>
   </main>
 
-  <div class="illustration">
-    <img src="https://assets9.lottiefiles.com/packages/lf20_puciaact.json" alt="Social innovation illustration">
-    <img src="https://assets3.lottiefiles.com/packages/lf20_5ngs2ksb.json" alt="Healthcare animation">
-    <img src="https://assets5.lottiefiles.com/packages/lf20_mcelnmbn.json" alt="Engineering animation">
+  <!-- Include the Lottie player once in <head> if not already there -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <!-- Replace illustration block -->
+  <div class="illustration grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+    <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_puciaact.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+    <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_5ngs2ksb.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+    <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_mcelnmbn.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
   </div>
 
   <script>
